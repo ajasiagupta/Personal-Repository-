@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterController">
+   <children>
+      <BorderPane layoutX="-24.0" layoutY="-5.0" prefHeight="410.0" prefWidth="255.0">
+         <center>
+            <ImageView fitHeight="707.0" fitWidth="475.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../imgs/register.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <Label fx:id="firstNameRegister" layoutX="401.0" layoutY="41.0" text="First Name" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastNameRegister" layoutX="401.0" layoutY="105.0" text="Last Name" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="addressRegister" layoutX="401.0" layoutY="233.0" text="Address" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="zipcodeRegister" layoutX="406.0" layoutY="293.0" text="Zip Code" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="stateRegister" layoutX="404.0" layoutY="166.0" text="State" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameRegister" layoutX="409.0" layoutY="426.0" text="Create Username" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordRegister" layoutX="798.0" layoutY="41.0" text="Create Password" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sqRegister" layoutX="793.0" layoutY="105.0" text=" Security Question" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ssnRegister" layoutX="798.0" layoutY="358.0" text=" Social Security Number" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="suRegister" layoutX="795.0" layoutY="426.0" text="Select User Type" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="saRegister" layoutX="797.0" layoutY="233.0" text="Security Anwser" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_firstname" layoutX="400.0" layoutY="61.0" prefHeight="25.0" prefWidth="267.0" promptText="First Name" />
+      <TextField fx:id="tf_lastname" layoutX="402.0" layoutY="126.0" prefHeight="25.0" prefWidth="267.0" promptText="Last Name" />
+      <TextField fx:id="tf_state" layoutX="402.0" layoutY="192.0" prefHeight="25.0" prefWidth="267.0" promptText="State" />
+      <TextField fx:id="tf_address" layoutX="402.0" layoutY="254.0" prefHeight="25.0" prefWidth="267.0" promptText="Address" />
+      <TextField fx:id="tf_zip" layoutX="405.0" layoutY="318.0" prefHeight="25.0" prefWidth="267.0" promptText="Zip Code" />
+      <TextField fx:id="tf_rusername" layoutX="404.0" layoutY="447.0" prefHeight="25.0" prefWidth="267.0" promptText="Username" />
+      <TextField fx:id="tf_rpassword" layoutX="796.0" layoutY="61.0" prefHeight="25.0" prefWidth="267.0" promptText="Password" />
+      <TextField fx:id="tf_squestion" alignment="TOP_LEFT" layoutX="796.0" layoutY="126.0" prefHeight="90.0" prefWidth="267.0" promptText="Question" />
+      <TextField fx:id="tf_sanswer" layoutX="796.0" layoutY="254.0" prefHeight="84.0" prefWidth="267.0" promptText="Anwser" />
+      <TextField fx:id="tf_ssn" layoutX="798.0" layoutY="381.0" prefHeight="25.0" prefWidth="267.0" promptText="XXX-XX-XXXX" />
+      <Button fx:id="bt_register" layoutX="952.0" layoutY="486.0" mnemonicParsing="false" style="-fx-background-color: #264eca; -fx-cursor: hand;" text="Create Account" textFill="#f2eaea">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="bt_rlogin" layoutX="686.0" layoutY="646.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Back to login" textFill="#3832ae" underline="true" />
+      <RadioButton fx:id="rb_customer" contentDisplay="GRAPHIC_ONLY" layoutX="799.0" layoutY="451.0" mnemonicParsing="false" style="-fx-cursor: hand;" text="0" />
+      <RadioButton fx:id="rb_admin" contentDisplay="GRAPHIC_ONLY" layoutX="888.0" layoutY="451.0" mnemonicParsing="false" style="-fx-cursor: hand;" text="1" />
+      <Label fx:id="suRegister1" layoutX="910.0" layoutY="451.0" text="Admin" />
+      <Label fx:id="suRegister2" layoutX="821.0" layoutY="451.0" text="Customer" />
+      <Label fx:id="zipcodeRegister1" layoutX="409.0" layoutY="358.0" text="Email" textFill="#3832ae">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_email" layoutX="404.0" layoutY="381.0" prefHeight="25.0" prefWidth="267.0" promptText="example@email.com" />
+   </children>
+</AnchorPane>

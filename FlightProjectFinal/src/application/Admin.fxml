@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.flightsController">
+   <children>
+      <TableView fx:id="flightTable" accessibleRole="BUTTON" blendMode="DARKEN" cache="true" layoutY="102.0" onMouseClicked="#getFlight" pickOnBounds="false" prefHeight="595.0" prefWidth="737.0">
+         <columns>
+            <TableColumn fx:id="colNum" maxWidth="124.0" text="Flight #" />
+            <TableColumn fx:id="colPrice" maxWidth="211.0" minWidth="0.0" prefWidth="62.0" text="Price" />
+            <TableColumn fx:id="colAirline" maxWidth="271.0" minWidth="0.0" prefWidth="101.0" text="Airline" />
+            <TableColumn fx:id="colFrom" maxWidth="318.0" minWidth="0.0" prefWidth="99.0" text="From" />
+            <TableColumn fx:id="colTo" maxWidth="344.0" minWidth="0.0" prefWidth="87.0" text="To" />
+            <TableColumn fx:id="colDepart" maxWidth="497.0" minWidth="0.0" prefWidth="127.0" text="Depart" />
+            <TableColumn fx:id="colArrive" maxWidth="400.0" minWidth="0.0" prefWidth="122.0" text="Arrive" />
+            <TableColumn fx:id="colCabin" maxWidth="400.0" minWidth="0.0" prefWidth="76.0" text="Cabin" />
+            <TableColumn fx:id="colSeats" maxWidth="262.0" prefWidth="63.0" text="Seats" />
+         </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="74.0" text="Edit, Add, or Delete Flights">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="736.0" layoutY="63.0" prefHeight="638.0" prefWidth="394.0" style="-fx-background-color: gainsboro;">
+         <children>
+            <Label layoutX="37.0" layoutY="82.0" text="Price">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPrice" layoutX="140.0" layoutY="73.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box,  #274FC7, 3, -10, 2 ,2);" />
+            <Label layoutX="37.0" layoutY="234.0" text="From">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFrom" layoutX="141.0" layoutY="273.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box,  #274FC7, 3, -10, 2 ,2);" />
+            <Label layoutX="36.0" layoutY="282.0" text="To">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTo" layoutX="141.0" layoutY="225.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box,  #274FC7, 3, -10, 2 ,2);" />
+            <Label layoutX="37.0" layoutY="187.0" text="Airline">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAirline" layoutX="140.0" layoutY="178.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box,  #274FC7, 3, -10, 2 ,2);" />
+            <Label layoutX="34.0" layoutY="132.0" text="Cabin">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCabin" layoutX="141.0" layoutY="123.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box,  #274FC7, 3, -10, 2 ,2);" />
+            <Label layoutX="37.0" layoutY="36.0" text="Flight Number">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="332.0" text="Depart Time">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="371.0" text="Arrive Time">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="214.0" layoutY="556.0" mnemonicParsing="false" onAction="#deleteFlight" prefHeight="39.0" prefWidth="145.0" style="-fx-background-color: lightcoral;" text="Delete" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="37.0" layoutY="556.0" mnemonicParsing="false" onAction="#addFlight" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: lightgreen;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="36.0" layoutY="500.0" mnemonicParsing="false" onAction="#updateFlight" prefHeight="39.0" prefWidth="323.0" style="-fx-background-color: #274FC7;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtArrive" layoutX="141.0" layoutY="362.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box,  #274FC7, 3, -10, 2 ,2);" />
+            <TextField fx:id="txtDepart" layoutX="140.0" layoutY="323.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box,  #274FC7, 3, -10, 2 ,2);" />
+            <TextField fx:id="txtNum" layoutX="141.0" layoutY="27.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box,  #274FC7, 3, -10, 2 ,2);" />
+            <Label layoutX="36.0" layoutY="416.0" text="Seats Available">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSeats" layoutX="141.0" layoutY="407.0" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box,  #274FC7, 3, -10, 2 ,2);" />
+            <Label layoutX="99.0" layoutY="468.0" text="Please Verify Before Updating Flights" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="63.0" prefWidth="1130.0" style="-fx-background-color: #274FC7; -fx-effect: dropshadow(three-pass-box, gray, 10, 0, 0 ,1);">
+         <children>
+            <Label layoutX="14.0" layoutY="7.0" text="JetSetters" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="723.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToHome" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="955.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToAccount" style="-fx-background-color: transparent;" text="Account" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="849.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Admin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="1083.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/logoutIcon.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="1078.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;" text="Logout" textFill="TRANSPARENT" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
